@@ -1,0 +1,26 @@
+# Secrets & local state
+.env
+**/.session_cache.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.streamlit/secrets.toml
+venv/
+.venv/
+
+# Node / frontend
+node_modules/
+frontend/dist/
+
+# Build artifacts & local exports
+exports/
+
+# Internal design source files (not part of the app)
+design_handoff_prioritization_redesign/
+
+# Legacy Streamlit prototype (superseded by the FastAPI + React app)
+app.py
+requirements.txt
+utils/
