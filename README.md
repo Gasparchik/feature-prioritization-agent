@@ -43,16 +43,26 @@ Built with **Claude** (Anthropic), **FastAPI**, and **React + TypeScript**.
 # 1. Clone the repo
 git clone https://github.com/your-username/feature-prioritization.git
 cd feature-prioritization
+```
 
-# 2. Create .env from the example and add your API key
+```bash
+# 2. Create .env from the example
+# Mac / Linux / Git Bash:
 cp .env.example .env
-# edit .env and set ANTHROPIC_API_KEY=sk-ant-...
+# Windows PowerShell:
+# Copy-Item .env.example .env
+```
 
+Open `.env` and set `ANTHROPIC_API_KEY=sk-ant-...`
+
+```bash
 # 3. Build and run
 docker compose up --build
 ```
 
 Open **http://localhost** in your browser.
+
+> **Port 80 in use?** Set `FRONTEND_PORT=8080` in `.env` and open `http://localhost:8080` instead.
 
 ---
 
@@ -64,16 +74,23 @@ Open **http://localhost** in your browser.
 cd backend
 
 # Create a virtual environment
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+# Mac / Linux:
+python3 -m venv .venv && source .venv/bin/activate
+# Windows PowerShell:
+# python -m venv .venv; .venv\Scripts\Activate.ps1
 
 # Install dependencies
 pip install -r requirements.txt
+```
 
-# Set the API key (or copy ../.env.example to ../.env and fill it in)
-export ANTHROPIC_API_KEY=sk-ant-...
+Create a `.env` file at the **project root** (one level above `backend/`):
 
-# Start the server
+```
+ANTHROPIC_API_KEY=sk-ant-...
+```
+
+```bash
+# Start the server (from the backend/ directory)
 uvicorn main:app --reload --port 8000
 ```
 
@@ -106,7 +123,19 @@ Open **http://localhost:5173**.
 
 ## Rate limits
 
-The `/api/cluster` endpoint is limited to **1 analysis per IP per day** to control API costs. Adjust the `@limiter.limit(...)` decorator in `backend/main.py` if you're running privately.
+The `/api/cluster` endpoint is limited to **1 analysis per IP per day** to control API costs.
+
+Running locally and want to remove the limit? In `backend/main.py`, change:
+
+```python
+@limiter.limit("1/day")
+```
+
+to:
+
+```python
+@limiter.limit("100/day")
+```
 
 ---
 
