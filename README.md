@@ -17,6 +17,22 @@ Built with **Claude** (Anthropic), **FastAPI**, and **React + TypeScript**.
 
 ---
 
+## Demo
+
+**Feedback clusters** — Claude groups raw feedback into 3–8 thematic clusters with representative quotes:
+
+![Feedback clusters](assets/screenshot-clusters.png)
+
+**RICE prioritization** — each cluster is scored by Reach × Impact × Confidence / Effort with full reasoning:
+
+![RICE prioritization table](assets/screenshot-rice.png)
+
+**PRD generation** — one-click PRD streamed in real time, editable in-browser, exportable to DOCX:
+
+![PRD generation](assets/screenshot-prd.png)
+
+---
+
 ## Tech stack
 
 | Layer | Technology |
