@@ -83,11 +83,17 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Create a `.env` file at the **project root** (one level above `backend/`):
+Create a `.env` file at the **project root** (one level above `backend/`).
+The easiest way is to copy the example and fill in your key:
 
+```bash
+# Mac / Linux / Git Bash:
+cp .env.example .env
+# Windows PowerShell:
+# Copy-Item .env.example .env
 ```
-ANTHROPIC_API_KEY=sk-ant-...
-```
+
+Then open `.env` and set `ANTHROPIC_API_KEY=sk-ant-...`
 
 ```bash
 # Start the server (from the backend/ directory)
