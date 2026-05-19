@@ -21,6 +21,6 @@ exports/
 design_handoff_prioritization_redesign/
 
 # Legacy Streamlit prototype (superseded by the FastAPI + React app)
-app.py
-requirements.txt
-utils/
+/app.py
+/requirements.txt
+/utils/
