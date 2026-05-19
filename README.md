@@ -39,6 +39,10 @@ Built with **Claude** (Anthropic), **FastAPI**, and **React + TypeScript**.
 
 ![PRD generation](assets/screenshot-prd.png)
 
+**Export** — download the PRD as DOCX, backlog as Excel/CSV, or push tasks to Jira; configure exactly what content to include:
+
+![Export screen](assets/screenshot-export.png)
+
 ---
 
 ## Tech stack
