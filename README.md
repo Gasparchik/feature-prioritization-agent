@@ -208,4 +208,8 @@ English and Russian. The language toggle on the upload screen switches both the 
 
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE).
+
+---
+
+Built by **Gaspar Nikogosyan** · [LinkedIn](https://www.linkedin.com/in/gaspar-nikogosyan/) · [gasparnikogosyan@gmail.com](mailto:gasparnikogosyan@gmail.com)
