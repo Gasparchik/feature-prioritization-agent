@@ -4,6 +4,24 @@ An AI-native product management tool that transforms raw user feedback into a pr
 
 Built with **Claude** (Anthropic), **FastAPI**, and **React + TypeScript**.
 
+![RICE prioritization — scored clusters with reach, impact, confidence, effort](assets/screenshot-rice.png)
+
+---
+
+## Why I built this
+
+Product managers collect mountains of user feedback but rarely have time to synthesize it into a prioritized roadmap — the work usually requires a workshop, a spreadsheet, and several days of synthesis. I wanted to see if a focused AI tool could close that gap end-to-end: cluster the noise, score themes by RICE with reasoning, and draft the PRD — in the time it usually takes to schedule that workshop.
+
+---
+
+## Highlights
+
+- **End-to-end agentic flow** — a single Claude orchestration goes from raw text to scored clusters to a generated PRD and a stakeholder summary, every step grounded in the user's original feedback
+- **Streaming PRD generation** — Server-Sent Events stream the PRD as Claude writes it, then it's editable in-browser before export
+- **Editable AI output** — every RICE score ships with reasoning and adjustable sliders; AI gives the first cut, the PM keeps the final say
+- **Multi-format export** — DOCX for the PRD, Excel / CSV for the backlog, Jira-import CSV for tickets, plus a read-only share link
+- **Bilingual end-to-end** — one toggle switches both the UI and the AI-generated content between English and Russian
+
 ---
 
 ## What it does
